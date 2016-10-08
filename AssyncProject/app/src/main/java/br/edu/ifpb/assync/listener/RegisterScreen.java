@@ -1,0 +1,26 @@
+package br.edu.ifpb.assync.listener;
+
+import android.content.Intent;
+import android.view.View;
+import br.edu.ifpb.assync.activity.RegisterActivity;
+import br.edu.ifpb.assync.activity.MainActivity;
+
+/**
+ * Created by Thomas on 06/10/2016.
+ */
+public class RegisterScreen implements View.OnClickListener {
+    MainActivity mainActivity;
+
+    public RegisterScreen(MainActivity mainActivity){
+
+        this.mainActivity = mainActivity;
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        Intent intent = new Intent(this.mainActivity,RegisterActivity.class);
+        this.mainActivity.startActivity(intent);
+
+    }
+}
